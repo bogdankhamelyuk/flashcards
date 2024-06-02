@@ -1,0 +1,62 @@
+label {
+  width: 450px;
+  height: 250px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  label {
+    width: 90%;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.flashcard {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 600ms ease, opacity 300ms ease;
+}
+
+.flashcard div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  border: 2px solid grey;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: rgba(1, 1, 1, 0.1);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.slide-left {
+  transform: translateX(-100%) !important;
+  opacity: 0;
+}
+
+.slide-right {
+  transform: translateX(100%) !important;
+  opacity: 0;
+}

@@ -1,1 +1,16 @@
-<p>learn works!</p>
+<div class="container-fluid center">
+  <label>
+    <div class="flashcard" [class.flipped]="flipped" (click)="toggle()">
+      <div class="container-fluid card-content">
+        <p class="fs-3">Question {{ quesNumber }}</p>
+        <p class="fs-2">{{ quesText }}</p>
+      </div>
+      <div class="back">
+        <div class="container-fluid card-content">
+          <p class="fs-3">Question {{ quesNumber }}</p>
+          <p class="fs-2">{{ quesText }}</p>
+        </div>
+      </div>
+    </div>
+  </label>
+</div>
